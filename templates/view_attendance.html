@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Attendance</title>
+</head>
+
+<body>
+
+    <h1>Attendance Records</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Student ID</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+
+        {% for record in attendance %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">Back to Students</a>
+
+</body>
+</html>

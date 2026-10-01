@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud Attendance System</title>
+</head>
+
+<body>
+
+    <h1>Cloud Attendance System</h1>
+
+    <h2>Dashboard</h2>
+
+    <a href="/add_student">
+        <button>Add Student</button>
+    </a>
+
+    <a href="/attendance">
+        <button>Mark Attendance</button>
+    </a>
+
+    <a href="/view_attendance">
+        <button>View Attendance</button>
+    </a>
+
+    <a href="/attendance_percentage">
+        <button>Attendance Percentage</button>
+    </a>
+
+    <hr>
+
+    <h2>Students</h2>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Register No</th>
+            <th>Department</th>
+            <th>Year</th>
+        </tr>
+
+        {% for student in students %}
+        <tr>
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Percentage</title>
+</head>
+
+<body>
+
+    <h1>Attendance Percentage</h1>
+
+    <table border="1">
+        <tr>
+            <th>Student ID</th>
+            <th>Total Classes</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Attendance Percentage</th>
+        </tr>
+
+        {% for student in results %}
+        <tr>
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}%</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">Back to Students</a>
+
+</body>
+</html>
